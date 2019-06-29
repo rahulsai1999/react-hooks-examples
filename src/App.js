@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import useState from "./components/useState";
+import useEffect from "./components/useEffect";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Welcome to React Hooks</h2>
+      <br />
+      <h3>Links to all the hooks:</h3>
+      <div className="navbar">
+        <a href="/useState">useState</a>
+        <a href="/useEffect">useEffect</a>
+      </div>
+      <Router>
+        <Route path="/useState" component={useState} />
+        <Route path="/useEffect" component={useEffect} />
+      </Router>
     </div>
   );
 }
