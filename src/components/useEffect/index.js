@@ -8,13 +8,19 @@ const useEffectEx = () => {
     setTime(new Date());
   };
 
-  //all 3 examples in one
   useEffect(() => {
-    console.log("mount"); // componentDidMount
+    console.log("mount"); //componentDidMount
+  }, []);
+
+  useEffect(() => {
+    console.log("update");
+  }, [count]); //componentDidUpdate
+
+  useEffect(() => {
     return () => {
       console.log("unmount"); //componentDidUnmount
     };
-  }, [count]); //componentDidUpdate
+  }, []);
 
   return (
     <div>
