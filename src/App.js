@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import useState from "./components/useState";
 import useEffect from "./components/useEffect";
+import APICall from "./components/APICall";
 
 import "./App.css";
 
@@ -15,10 +16,12 @@ function App() {
       <div className="navbar">
         <a href="/useState">useState</a>
         <a href="/useEffect">useEffect</a>
+        <a href="/apicall">API Call</a>
       </div>
       <Router>
         <Route path="/useState" component={useState} />
         <Route path="/useEffect" component={useEffect} />
+        <Route path="/apicall" component={APICall} />
       </Router>
     </div>
   );
