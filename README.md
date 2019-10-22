@@ -30,6 +30,3 @@
   - componentDidUpdate: state variable being updated
 
   - componentWillUnmount: return statement with function inside
-
-- 
-
